@@ -1,204 +1,168 @@
 # 🚕 Al Toque — Aplicación móvil de solicitudes de taxi
 
-**Proyecto académico de Ingeniería Informática | Flutter · Dart · Firebase · Google Maps**
+**Proyecto de tesis de Ingeniería Informática**  
+Flutter · Dart · Firebase · Google Maps
 
-Al Toque es un prototipo de aplicación móvil orientado a la gestión de solicitudes de servicios de taxi, desarrollado en el contexto de un proyecto de tesis de Ingeniería Informática.
+Al Toque es un prototipo de aplicación móvil para la gestión de solicitudes de taxi, con interfaces diferenciadas para pasajeros y conductores.
 
-El proyecto busca facilitar la interacción entre pasajeros y conductores mediante una aplicación que permite solicitar viajes, recibir solicitudes, consultar recorridos y administrar información relacionada con los servicios de transporte.
+El proyecto fue desarrollado en el contexto de un trabajo académico orientado a las necesidades de la **Asociación de Transporte Libre Radio Móvil San Pedro Ltda.**, en Yacuiba, Bolivia.
 
-> **Estado del proyecto:** prototipo académico. La aplicación no se encuentra actualmente desplegada como un servicio comercial.
+> **Estado:** prototipo académico. No es un servicio de transporte actualmente operativo.
+>
+> **Repositorio:** documentación técnica y capturas de pantalla. El código fuente no está publicado aquí.
 
-## 📌 Contexto del proyecto
+## 📌 Descripción del proyecto
 
-El proyecto se desarrolló tomando como referencia las necesidades de la **Asociación de Transporte Libre Radio Móvil San Pedro Ltda.**, ubicada en Yacuiba, Bolivia.
+Al Toque propone una solución móvil para facilitar la comunicación entre pasajeros y conductores durante la solicitud y realización de viajes.
 
-La propuesta contempla dos perfiles principales:
+El prototipo contempla dos experiencias:
 
-- **Pasajero:** permite solicitar un servicio de taxi, visualizar información del viaje y consultar su estado.
-- **Conductor:** permite recibir solicitudes, visualizar recorridos y gestionar el desarrollo del servicio.
+| Pasajero | Conductor |
+|---|---|
+| Solicitar servicios de taxi | Recibir solicitudes |
+| Visualizar ubicaciones y rutas | Consultar rutas de viaje |
+| Consultar el estado del servicio | Iniciar y finalizar viajes |
+| Calificar al conductor | Calificar al pasajero |
+| Gestionar información del perfil | Consultar información e historial de viajes |
 
-El objetivo académico fue estudiar y aplicar tecnologías de desarrollo móvil y servicios en la nube a un caso práctico de transporte local.
+Las funcionalidades corresponden a los módulos documentados del prototipo y no implican que todos los procesos estén actualmente operativos de extremo a extremo.
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología | Aplicación en el proyecto |
+| Tecnología | Uso |
 |---|---|
-| Flutter | Desarrollo de la aplicación móvil |
-| Dart | Programación y lógica de la aplicación |
-| Firebase Authentication | Autenticación de usuarios |
-| Cloud Firestore | Almacenamiento y consulta de información |
-| Firebase Cloud Messaging | Integración de notificaciones |
-| Firebase Storage | Gestión de archivos |
-| Google Maps | Visualización de mapas y recorridos |
-| Geolocator y Geocoding | Geolocalización y tratamiento de ubicaciones |
-| Lottie | Animaciones de interfaz |
+| **Flutter y Dart** | Desarrollo de la aplicación móvil |
+| **Firebase Authentication** | Autenticación de usuarios |
+| **Cloud Firestore** | Persistencia y consulta de información |
+| **Firebase Cloud Messaging** | Mensajería y notificaciones |
+| **Firebase Storage** | Gestión de archivos |
+| **Google Maps** | Mapas y visualización de recorridos |
+| **Geolocator y Geocoding** | Ubicación y geocodificación |
+| **Lottie** | Animaciones de interfaz |
 
-## 📱 Funcionalidades del prototipo
+## 💻 Contribuciones técnicas y adaptaciones
 
-### Módulo de pasajeros
+El proyecto tomó como punto de partida una aplicación de ejemplo de un curso de Flutter disponible en Udemy, utilizada como base de aprendizaje.
 
-- Registro e inicio de sesión.
-- Visualización de mapas.
-- Selección de ubicaciones y solicitud de taxi.
-- Búsqueda y asignación de conductor.
-- Visualización del estado de una solicitud.
-- Seguimiento del recorrido.
-- Finalización y calificación del servicio.
-- Gestión de información del perfil.
+A partir de esa base, se identificaron adaptaciones realizadas para el trabajo académico.
 
-### Módulo de conductores
+### Historial de viajes del conductor
 
-- Registro e inicio de sesión.
-- Visualización del mapa y ubicación.
-- Recepción de solicitudes de servicio.
-- Consulta de información del pasajero.
-- Visualización de rutas.
-- Inicio y finalización de viajes.
-- Calificación del pasajero.
-- Consulta de información de viajes.
+Se incorporaron pantallas y controladores para consultar viajes registrados y visualizar su información detallada.
 
-**Nota:** estas funcionalidades corresponden a módulos representados en el prototipo. No se afirma que todos los flujos estén actualmente operativos o probados de extremo a extremo.
+Esta adaptación involucró:
 
-## 📸 Capturas de pantalla
+- Desarrollo de interfaces para listar y consultar viajes.
+- Incorporación de pantallas de detalle.
+- Reutilización de modelos y proveedores existentes.
+- Integración con la navegación de la aplicación.
 
-Las siguientes imágenes muestran diferentes interfaces del prototipo.
+### Personalización de interfaces
 
-### 1. Experiencia del pasajero
+Se adaptó la presentación de la aplicación al contexto del servicio de transporte local mediante:
 
-**Solicitud y asignación de taxi**
+- Modificación de elementos visuales y textos.
+- Personalización de la identidad de la aplicación.
+- Adaptación de la pantalla inicial y selección de perfiles.
+- Incorporación de una animación de presentación con Lottie.
+
+### Mantenimiento y adaptación del código
+
+Durante el desarrollo académico se realizaron ajustes en:
+
+- Manejo de tipos anulables (*null safety*) en Dart.
+- Controladores y navegación.
+- Compatibilidad y mantenimiento del proyecto Flutter.
+
+### Trabajo con servicios externos
+
+El proyecto permitió trabajar con una aplicación que integra Firebase y Google Maps para autenticación, persistencia de datos, notificaciones y representación de ubicaciones.
+
+**Aclaración sobre la autoría:** las funcionalidades provenientes del curso no se presentan como implementaciones originales. Las contribuciones descritas corresponden a adaptaciones identificadas respecto al material de referencia.
+
+## 🏗️ Organización técnica
+
+El prototipo utiliza una estructura organizada principalmente en:
+
+- **Pages:** pantallas e interfaces de usuario.
+- **Controllers:** lógica asociada a las pantallas y navegación.
+- **Models:** representación de entidades y datos.
+- **Providers:** acceso a servicios y operaciones con información.
+- **Utilities:** funciones y recursos auxiliares.
+
+La aplicación interactúa con servicios de Firebase y Google para sus funcionalidades relacionadas con usuarios, datos y mapas.
+
+## 📸 Galería de capturas
+
+Las siguientes imágenes documentan las interfaces del prototipo académico.
+
+### Experiencia del pasajero
+
+**Solicitud y asignación del servicio**
 
 <p>
-  <img src="docs/capturas/solicitud-taxi-mapa.png" width="220" alt="Mapa para solicitar taxi">
-  <img src="docs/capturas/confirmacion-solicitud-y-ruta.png" width="220" alt="Confirmación de solicitud y recorrido">
+  <img src="docs/capturas/solicitud-taxi-mapa.png" width="220" alt="Mapa de solicitud de taxi">
+  <img src="docs/capturas/confirmacion-solicitud-y-ruta.png" width="220" alt="Confirmación de solicitud y ruta">
   <img src="docs/capturas/buscando-conductor.png" width="220" alt="Búsqueda de conductor">
   <img src="docs/capturas/conductor-acepta-ruta.png" width="220" alt="Aceptación de solicitud">
 </p>
 
-**Seguimiento y finalización del servicio**
+**Seguimiento, finalización y perfil**
 
 <p>
   <img src="docs/capturas/viaje-en-curso-pasajero.png" width="220" alt="Viaje en curso">
   <img src="docs/capturas/viaje-finalizado-calificar-conductor.png" width="220" alt="Calificación del conductor">
-  <img src="docs/capturas/editar-perfil-pasajero.png" width="220" alt="Edición del perfil">
+  <img src="docs/capturas/editar-perfil-pasajero.png" width="220" alt="Edición de perfil">
 </p>
 
-### 2. Experiencia del conductor
+### Experiencia del conductor
 
 **Disponibilidad y recepción de solicitudes**
 
 <p>
-  <img src="docs/capturas/mapa-conductor-disponible.png" width="220" alt="Mapa del conductor">
+  <img src="docs/capturas/mapa-conductor-disponible.png" width="220" alt="Conductor disponible">
   <img src="docs/capturas/solicitud-recibida-conductor.png" width="220" alt="Solicitud recibida">
 </p>
 
-**Gestión del recorrido**
+**Gestión y finalización del recorrido**
 
 <p>
-  <img src="docs/capturas/ruta-conductor-iniciar-viaje.png" width="220" alt="Ruta para iniciar el viaje">
-  <img src="docs/capturas/ruta-conductor-finalizar-viaje.png" width="220" alt="Ruta para finalizar el viaje">
-  <img src="docs/capturas/detalle-cliente-y-recorrido.png" width="220" alt="Detalle del cliente y recorrido">
-  <img src="docs/capturas/detalle-conductor-y-recorrido.png" width="220" alt="Detalle del conductor y recorrido">
+  <img src="docs/capturas/ruta-conductor-iniciar-viaje.png" width="220" alt="Inicio del viaje">
+  <img src="docs/capturas/ruta-conductor-finalizar-viaje.png" width="220" alt="Finalización del viaje">
+  <img src="docs/capturas/detalle-cliente-y-recorrido.png" width="220" alt="Detalle del cliente">
+  <img src="docs/capturas/detalle-conductor-y-recorrido.png" width="220" alt="Detalle del conductor">
   <img src="docs/capturas/viaje-finalizado-calificar-cliente.png" width="220" alt="Calificación del cliente">
 </p>
 
-> Las capturas se presentan con fines de documentación académica. Algunas pantallas contienen mapas, ubicaciones o recorridos, por lo que fueron censuradas antes de su publicación para evitar revelar información sensible.
-
-## 🏗️ Arquitectura general
-
-La aplicación utiliza una estructura basada en componentes y clases que organizan las responsabilidades principales:
-
-- **Pantallas (Pages):** interfaces correspondientes a las funcionalidades del pasajero y del conductor.
-- **Controladores (Controllers):** gestión de eventos, navegación y lógica asociada a las pantallas.
-- **Modelos (Models):** representación de las entidades y estructuras de datos.
-- **Proveedores (Providers):** comunicación con los servicios externos y acceso a la información.
-- **Servicios Firebase:** autenticación, persistencia de datos y mensajería.
-
-Esta organización permite separar parcialmente la presentación, la lógica de aplicación y el acceso a servicios externos.
-
-## 💻 Contribuciones técnicas y adaptaciones
-
-Al Toque se desarrolló tomando como punto de partida una aplicación de ejemplo de un curso de Flutter disponible en Udemy. Este material proporcionó una base funcional que posteriormente fue adaptada al contexto del proyecto académico.
-
-Durante el desarrollo se identificaron las siguientes contribuciones y modificaciones:
-
-### 1. Historial de viajes del conductor
-
-Se incorporaron pantallas y controladores destinados a consultar el historial de viajes realizados por un conductor.
-
-Esta adaptación incluyó:
-
-- Implementación de interfaces para visualizar viajes registrados.
-- Incorporación de una pantalla de detalle del viaje.
-- Reutilización de modelos y proveedores de datos existentes.
-- Integración de las nuevas pantallas con la estructura de navegación de la aplicación.
-
-### 2. Adaptación de la interfaz de usuario
-
-Se realizaron modificaciones visuales para adecuar la aplicación al contexto del servicio de transporte local.
-
-Entre ellas:
-
-- Personalización de la identidad visual.
-- Modificación de textos y elementos de presentación.
-- Adaptación de la pantalla de entrada y selección de perfiles.
-- Incorporación de una animación de presentación utilizando Lottie.
-
-### 3. Mantenimiento y adaptación del código
-
-Durante el trabajo con el proyecto base se realizaron ajustes relacionados con:
-
-- Manejo de tipos anulables (*null safety*) en Dart.
-- Modificaciones en controladores y navegación.
-- Adaptaciones necesarias para trabajar con el código y las dependencias del proyecto.
-
-### 4. Integración y comprensión de servicios
-
-El proyecto permitió trabajar con la estructura de una aplicación Flutter que utiliza Firebase y Google Maps, incluyendo:
-
-- Autenticación de usuarios.
-- Almacenamiento y consulta de datos.
-- Representación de ubicaciones y recorridos.
-- Comunicación con servicios externos.
-
-Estas integraciones forman parte de la aplicación base y del trabajo de adaptación académica; no se presentan como implementaciones desarrolladas íntegramente desde cero.
-
-### Alcance de las contribuciones
-
-Las modificaciones descritas corresponden a diferencias identificadas respecto al material original del curso. El proyecto se presenta como una experiencia de aprendizaje, integración y adaptación de software en un contexto académico.
+> Las capturas se presentan con fines de documentación académica. Los mapas y otros datos visibles fueron desenfocados para reducir la exposición de información sensible.
 
 ## 🎯 Conocimientos aplicados
 
-El desarrollo de Al Toque permitió trabajar con conceptos y tecnologías relacionados con:
+Este proyecto permitió trabajar con:
 
-- Desarrollo de aplicaciones móviles multiplataforma.
-- Integración de servicios en la nube.
-- Autenticación y administración de usuarios.
-- Persistencia de información en bases de datos NoSQL.
-- Consumo e integración de servicios externos.
-- Geolocalización y representación de recorridos.
-- Organización de código mediante modelos, controladores y proveedores.
-- Diseño y adaptación de interfaces móviles.
+- Desarrollo móvil multiplataforma con Flutter.
+- Programación y mantenimiento de código Dart.
+- Integración de servicios Firebase.
+- Persistencia de información mediante Cloud Firestore.
+- Uso de mapas y servicios de geolocalización.
+- Organización de interfaces, controladores y modelos.
+- Adaptación y ampliación de una base de código existente.
 
-## 📋 Alcance del repositorio
+## 📋 Alcance y limitaciones
 
-Este repositorio está destinado a la **presentación técnica y visual del proyecto académico**.
-
-No contiene el código fuente completo de la aplicación ni archivos de configuración con credenciales.
-
-La redistribución del código utilizado como base de aprendizaje está sujeta a la licencia o autorización correspondiente.
+- Al Toque es un **prototipo académico**, no una aplicación comercial desplegada.
+- Este repositorio contiene documentación y evidencias visuales, no el código fuente completo.
+- Las integraciones externas pueden requerir nuevas configuraciones para funcionar.
+- El código utilizado como base de aprendizaje no se redistribuye aquí; cualquier publicación futura deberá respetar las licencias y autorizaciones correspondientes.
 
 ## 👨‍💻 Autor
 
-**Juan Bautista Padilla Caihuara**
-
+**Juan Bautista Padilla Caihuara**  
 Ingeniería Informática  
 Universidad Autónoma Juan Misael Saracho  
 Yacuiba, Bolivia
 
-**Enlaces:**
-
-- [GitHub](https://github.com/juanbpadilla)
-- [LinkedIn](https://www.linkedin.com/in/juan-padilla-ba013a17a/)
+[GitHub](https://github.com/juanbpadilla) · [LinkedIn](https://www.linkedin.com/in/juan-padilla-ba013a17a/)
 
 ---
 
