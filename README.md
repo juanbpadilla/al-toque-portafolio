@@ -115,20 +115,56 @@ La aplicación utiliza una estructura basada en componentes y clases que organiz
 
 Esta organización permite separar parcialmente la presentación, la lógica de aplicación y el acceso a servicios externos.
 
-## 💻 Adaptaciones realizadas durante el proyecto académico
+## 💻 Contribuciones técnicas y adaptaciones
 
-Al Toque se desarrolló a partir de una aplicación de ejemplo de un curso de Flutter disponible en Udemy, que sirvió como base de aprendizaje e implementación.
+Al Toque se desarrolló tomando como punto de partida una aplicación de ejemplo de un curso de Flutter disponible en Udemy. Este material proporcionó una base funcional que posteriormente fue adaptada al contexto del proyecto académico.
 
-Durante el desarrollo académico se realizaron adaptaciones para el contexto del servicio de taxis, entre las que se identificaron:
+Durante el desarrollo se identificaron las siguientes contribuciones y modificaciones:
 
-- Incorporación de pantallas y controladores para consultar el historial de viajes del conductor.
-- Personalización de interfaces y elementos visuales.
-- Adaptación de textos e identidad de la aplicación al contexto de la asociación.
-- Integración de una pantalla inicial animada mediante Lottie.
-- Ajustes de compatibilidad y mantenimiento del código Dart/Flutter.
-- Trabajo con la navegación, los modelos y los servicios utilizados por la aplicación.
+### 1. Historial de viajes del conductor
 
-Estas contribuciones se describen a partir de las diferencias identificadas entre la aplicación académica y el material original de referencia. Las funcionalidades heredadas no se presentan como desarrollos realizados desde cero.
+Se incorporaron pantallas y controladores destinados a consultar el historial de viajes realizados por un conductor.
+
+Esta adaptación incluyó:
+
+- Implementación de interfaces para visualizar viajes registrados.
+- Incorporación de una pantalla de detalle del viaje.
+- Reutilización de modelos y proveedores de datos existentes.
+- Integración de las nuevas pantallas con la estructura de navegación de la aplicación.
+
+### 2. Adaptación de la interfaz de usuario
+
+Se realizaron modificaciones visuales para adecuar la aplicación al contexto del servicio de transporte local.
+
+Entre ellas:
+
+- Personalización de la identidad visual.
+- Modificación de textos y elementos de presentación.
+- Adaptación de la pantalla de entrada y selección de perfiles.
+- Incorporación de una animación de presentación utilizando Lottie.
+
+### 3. Mantenimiento y adaptación del código
+
+Durante el trabajo con el proyecto base se realizaron ajustes relacionados con:
+
+- Manejo de tipos anulables (*null safety*) en Dart.
+- Modificaciones en controladores y navegación.
+- Adaptaciones necesarias para trabajar con el código y las dependencias del proyecto.
+
+### 4. Integración y comprensión de servicios
+
+El proyecto permitió trabajar con la estructura de una aplicación Flutter que utiliza Firebase y Google Maps, incluyendo:
+
+- Autenticación de usuarios.
+- Almacenamiento y consulta de datos.
+- Representación de ubicaciones y recorridos.
+- Comunicación con servicios externos.
+
+Estas integraciones forman parte de la aplicación base y del trabajo de adaptación académica; no se presentan como implementaciones desarrolladas íntegramente desde cero.
+
+### Alcance de las contribuciones
+
+Las modificaciones descritas corresponden a diferencias identificadas respecto al material original del curso. El proyecto se presenta como una experiencia de aprendizaje, integración y adaptación de software en un contexto académico.
 
 ## 🎯 Conocimientos aplicados
 
